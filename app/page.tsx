@@ -53,38 +53,19 @@ export default function HomePage() {
       {/* Hero */}
       <section className="min-h-screen flex flex-col justify-end pb-16 md:pb-24 px-6 md:px-12 lg:px-20 pt-32 md:pt-40">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
           className="mb-10 md:mb-14"
         >
           <Image
-            src="/logo.jpeg"
+            src="/logo_with_text.jpg"
             alt="Mirzavideo"
-            width={200}
-            height={80}
-            className="h-16 md:h-24 w-auto object-contain"
+            width={480}
+            height={480}
+            className="w-48 md:w-72 lg:w-96 h-auto object-contain"
             priority
           />
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-        >
-          <h1
-            className="font-serif text-ink leading-none"
-            style={{
-              fontSize: "clamp(4.5rem, 13vw, 13rem)",
-              lineHeight: "0.92",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Mirza
-            <br />
-            video
-          </h1>
         </motion.div>
 
         <motion.div
